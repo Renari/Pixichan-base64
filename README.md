@@ -1,5 +1,6 @@
 ## PixiChan
 [![Build Status](https://travis-ci.org/adefirmanf/PixiChan.svg?branch=master)](https://travis-ci.org/adefirmanf/PixiChan)
+[![Coverage Status](https://coveralls.io/repos/github/adefirmanf/PixiChan/badge.svg)](https://coveralls.io/github/adefirmanf/PixiChan)
 ### Description
 Pixichan allow you to render images from https://pixiv.net. It will render into  `base64` format. 
 If you following this url : https://i.pximg.net/img-original/img/2018/05/25/01/35/43/68906096_p0.png
