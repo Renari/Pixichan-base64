@@ -14,7 +14,6 @@ npm install --save pixichan
 Basic example : 
 ```sh
 const PixiChan = require('pixichan');
-
 PixiChan('https://i.pximg.net/img-original/img/2018/05/25/01/35/43/68906096_p0.png')
 .then((response)=>{
   console.log(response)
@@ -34,11 +33,13 @@ Initialize new Pixichan.
 ```sh
 PixiChan(url)
 ```
+
 | Param | Type |
 | ------ | ------ |
 | url | `string` |
 
 **Error**<br>
+
 | Description | Reason |
 | ------ | ------ |
 | 'Invalid URL of Pixiv image. ' | You can't put basic url in constructor<br>Url must following this format `http/s?*.(jpg/png/)` |
