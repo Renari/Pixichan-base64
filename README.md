@@ -43,6 +43,7 @@ PixiChan(url)
 | Description | Reason |
 | ------ | ------ |
 | 'Invalid URL of Pixiv image. ' | You can't put basic url in constructor<br>Url must following this format `http/s?*.(jpg/png/)` |
+
 Regex details : `/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/`
 
 ### Usage guide ###
