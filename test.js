@@ -7,9 +7,10 @@ const Pixichan = require('./index');
 
 const URL = 'https://i.pximg.net/img-original/img/2018/05/25/01/35/43/68906096_p0.png';
 describe(`Request to ${URL}`, () => {
-  it('Should return base 64', () => {
-    return Pixichan(URL).then((response) => {
+  it('Should return base 64', ((done) => {
+    Pixichan(URL).then((response) => {
       assert.equal(base64(response), true);
+      done();
     });
-  });
+  }));
 });

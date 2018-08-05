@@ -4,7 +4,7 @@
   "description": "Allow you to render image from Pixiv",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --timeout 10000"
   },
   "repository": {
     "type": "git",
