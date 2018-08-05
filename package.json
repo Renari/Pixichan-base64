@@ -4,8 +4,9 @@
   "description": "Allow you to render image from Pixiv",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 10000",
-    "cover" : "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test.js --timeout 10000"
+    "test": "npm run-script coveralls",
+    "coverage": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test.js --timeout 10000",
+    "coveralls": "npm run-script coverage && node node_modules/coveralls/index.js < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
