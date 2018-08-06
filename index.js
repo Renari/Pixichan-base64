@@ -26,7 +26,7 @@ const __url = Symbol('url');
 class PixiChan {
   constructor(url) {
     return new Promise((resolve, reject) => {
-      const _re = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
+      const _re = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/; // lgtm [js/regex/duplicate-in-character-class]
       if (typeof url !== 'string') {
         try {
           throw new TypeError(`Expected string but got ${typeof (url)}`);
