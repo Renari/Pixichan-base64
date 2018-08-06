@@ -14,3 +14,21 @@ describe(`Request to ${URL}`, () => {
     });
   }));
 });
+describe('Request to undefined URL', () => {
+  it('Should return TypeError: Expected string but got undefined', (() => {
+    Pixichan().then(() => {
+
+    }).catch((err) => {
+      assert.equal(err.toString(), 'TypeError: Expected string but got undefined');
+    });
+  }));
+});
+describe('Request to bad URL', () => {
+  it('Should return TypeError: Invalid URL of Pixiv image. ', (() => {
+    Pixichan('https://pixiv.net').then(() => {
+
+    }).catch((err) => {
+      assert.equal(err.toString(), 'TypeError: Invalid URL of Pixiv image. ');
+    });
+  }));
+});

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run-script coveralls",
-    "coverage": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test.js --timeout 10000",
+    "coverage": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test.js --timeout 100000",
     "coveralls": "npm run-script coverage && node node_modules/coveralls/index.js < coverage/lcov.info"
   },
   "repository": {

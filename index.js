@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable arrow-body-style */
+/* eslint-disable consistent-return */
 
 /**
  * Module dependecies
@@ -24,30 +25,24 @@ const __url = Symbol('url');
  */
 class PixiChan {
   constructor(url) {
-    const _re = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
-    if (typeof url !== 'string') {
-      try {
-        throw new TypeError(`Expected string but got ${typeof (url)}`);
-      } catch (e) {
-        console.log(e);
-      }
-      return;
-    }
-    if (!_re.test(url)) {
-      try {
-        throw new TypeError('Invalid URL of Pixiv image. ');
-      } catch (e) {
-        console.log(e);
-      }
-      return;
-    }
-    /** @protected */
-    this[__url] = url;
-    // this = opts;
-  }
-
-  init() {
     return new Promise((resolve, reject) => {
+      const _re = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/;
+      if (typeof url !== 'string') {
+        try {
+          throw new TypeError(`Expected string but got ${typeof (url)}`);
+        } catch (e) {
+          return reject(e);
+        }
+      }
+      if (!_re.test(url)) {
+        try {
+          throw new TypeError('Invalid URL of Pixiv image. ');
+        } catch (e) {
+          return reject(e);
+        }
+      }
+      /** @protected */
+      this[__url] = url;
       const R = Request.defaults({
         headers: {
           referer: 'https://www.pixiv.net',
@@ -56,15 +51,15 @@ class PixiChan {
       });
       R.get(this[__url]).then((response) => {
         const Img = Buffer.from(response, 'binary').toString('base64');
-        resolve(Img);
+        return resolve(Img);
       }).catch((err) => {
-        reject(err);
+        return reject(err);
       });
+      // this = opts;
     });
   }
 }
 
 module.exports = (url) => {
-  return new PixiChan(url)
-    .init();
+  return new PixiChan(url);
 };
