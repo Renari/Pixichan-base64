@@ -32,3 +32,12 @@ describe('Request to bad URL', () => {
     });
   }));
 });
+describe('Request to 404 URL', () => {
+  it('Should return Error from request library. ', (() => {
+    Pixichan('https://i.pximg.net/img-original/img/2018/05/25/01/35/43/68906096_p10.png').then((res) => {
+      // console.log(res);
+    }).catch((err) => {
+      assert.equal(err.statusCode, '404');
+    });
+  }));
+});
