@@ -1,6 +1,6 @@
 {
   "name": "pixichan",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Allow you to render image from Pixiv",
   "main": "index.js",
   "scripts": {
