@@ -1,5 +1,5 @@
 ## PixiChan
-[![Build Status](https://travis-ci.org/adefirmanf/PixiChan.svg?branch=master)](https://travis-ci.org/adefirmanf/PixiChan)
+[![Build Status](https://travis-ci.org/adefirmanf/PixiChan-api.svg?branch=master)](https://travis-ci.org/adefirmanf/PixiChan-api)
 [![Coverage Status](https://coveralls.io/repos/github/adefirmanf/PixiChan/badge.svg?branch=master&service=github)](https://coveralls.io/github/adefirmanf/PixiChan?branch=master&service=github)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7edc3ec0a9674c3a8b7249109bb16f18)](https://www.codacy.com/project/adefirmanf/PixiChan-api/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=adefirmanf/PixiChan-api&amp;utm_campaign=Badge_Grade_Dashboard)
 ### Description
