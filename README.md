@@ -98,3 +98,4 @@ Regex details : `/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/`
     };
     </script>
     ```
+    > PS : You can't using this library directly to frontend. You should using Node.js or another framework of JS Backend. 
